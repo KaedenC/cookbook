@@ -100,7 +100,7 @@ DATABASES = {
         'HOST': env("DB_HOST"),
         'PORT': env("DB_PORT"),
         'TEST': {
-            'NAME': 'db_test',
+            'NAME': 'recipe_test_db',
         }
     }
 }
