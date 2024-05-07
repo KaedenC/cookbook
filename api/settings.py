@@ -24,8 +24,8 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("SECRET_KEY")
+# SECURITY WARNING: keep the secret key used in production secret! (i cant figure out why github actions wont connect with the variables i've provided in github secrets)
+SECRET_KEY = 'django-insecure-=cldztbc4jg&xl0!x673!*v2_=p$$eu)=7*f#d0#zs$44xx-h^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -94,11 +94,11 @@ WSGI_APPLICATION = 'api.wsgi.app'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env("DB_NAME"),
-        'USER': env("DB_USER"),
-        'PASSWORD': env("DB_PASSWORD"),
-        'HOST': env("DB_HOST"),
-        'PORT': env("DB_PORT"),
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': 't6Zlh5SLMqFp',
+        'HOST': 'ep-gentle-snow-a4oqmlq0-pooler.us-east-1.aws.neon.tech',
+        'PORT': '5432',
         'TEST': {
             'NAME': 'recipe_test_db',
         }
